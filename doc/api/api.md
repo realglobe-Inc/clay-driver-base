@@ -1,9 +1,10 @@
-# clay-driver-base@0.0.3
+# clay-driver-base@0.0.4
 
 Base driver for clay
 
 + Functions
   + [assertDriver(driver)](#clay-driver-base-function-assert-driver)
+  + [create(args)](#clay-driver-base-function-create)
 + [Driver](clay-driver-base-classes) Class
   + [new Driver()](#clay-driver-base-classes-driver-constructor)
   + [driver.open(config)](#clay-driver-base-classes-driver-open)
@@ -26,6 +27,16 @@ Assert driver instance
 | Param | Type | Description |
 | ----- | --- | -------- |
 | driver | Driver |  |
+
+<a class='md-heading-link' name="clay-driver-base-function-create" ></a>
+
+### create(args) -> `Driver`
+
+Create driver instance
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| args | * |  |
 
 
 

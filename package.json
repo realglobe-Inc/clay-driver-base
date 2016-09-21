@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-base",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Base driver for clay",
   "main": "lib",
   "browser": "ci/browser",
