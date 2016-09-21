@@ -98,6 +98,8 @@ class MyDriver extends Driver {
 }
 ```
 
+For more detail, see [API Guide](./doc/api/api.md)
+
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 

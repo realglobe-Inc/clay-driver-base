@@ -20,7 +20,7 @@ describe('assert-driver', function () {
   }))
 
   it('Assert driver', () => co(function * () {
-    // assert.doesNotThrow(() => {
+    assert.doesNotThrow(() => {
     let noop = () => null
     assertDriver({
       open: noop,
@@ -31,7 +31,7 @@ describe('assert-driver', function () {
       delete: noop,
       cursor: noop
     })
-    // })
+    })
   }))
 })
 

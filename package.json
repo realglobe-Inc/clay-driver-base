@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-base",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Base driver for clay",
   "main": "lib",
   "browser": "ci/browser",
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-base#readme",
   "dependencies": {
     "abind": "^1.0.0",
-    "clay-constants": "0.0.2",
+    "clay-constants": "^0.2.0",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
