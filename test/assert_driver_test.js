@@ -21,16 +21,16 @@ describe('assert-driver', function () {
 
   it('Assert driver', () => co(function * () {
     assert.doesNotThrow(() => {
-    let noop = () => null
-    assertDriver({
-      open: noop,
-      close: noop,
-      create: noop,
-      read: noop,
-      update: noop,
-      delete: noop,
-      cursor: noop
-    })
+      let noop = () => null
+      assertDriver({
+        open: noop,
+        close: noop,
+        create: noop,
+        read: noop,
+        update: noop,
+        delete: noop,
+        cursor: noop
+      })
     })
   }))
 })

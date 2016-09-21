@@ -16,6 +16,18 @@
         }
       ],
       "examples": []
+    },
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create driver instance",
+      "parameters": [],
+      "examples": [],
+      "returns": {
+        "type": "Driver",
+        "description": ""
+      }
     }
   ],
   "classes": [
