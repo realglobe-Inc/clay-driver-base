@@ -41,7 +41,8 @@
     "coz": "^6.0.20",
     "filecopy": "^2.1.2",
     "injectmock": "^2.0.0",
-    "sg-templates": "^1.2.2"
+    "sg-templates": "^1.2.2",
+    "sg-travis": "^1.1.33"
   },
   "engines": {
     "node": ">=6",
