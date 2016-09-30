@@ -7,8 +7,8 @@ Base driver for clay
   + [create(args)](#clay-driver-base-function-create)
 + [Driver](clay-driver-base-classes) Class
   + [new Driver()](#clay-driver-base-classes-driver-constructor)
-  + [driver.open(config)](#clay-driver-base-classes-driver-open)
-  + [driver.close(config)](#clay-driver-base-classes-driver-close)
+  + [driver.connect(config)](#clay-driver-base-classes-driver-connect)
+  + [driver.disconnect(config)](#clay-driver-base-classes-driver-disconnect)
   + [driver.create(namepath, data)](#clay-driver-base-classes-driver-create)
   + [driver.read(namepath)](#clay-driver-base-classes-driver-read)
   + [driver.update(namepath, data)](#clay-driver-base-classes-driver-update)
@@ -55,22 +55,22 @@ Constructor of Driver class
 
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-open" ></a>
+<a class='md-heading-link' name="clay-driver-base-classes-driver-connect" ></a>
 
-### driver.open(config) -> `Promise`
+### driver.connect(config) -> `Promise`
 
-Open driver
+Connect driver
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | config | Object |  |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-close" ></a>
+<a class='md-heading-link' name="clay-driver-base-classes-driver-disconnect" ></a>
 
-### driver.close(config) -> `Promise`
+### driver.disconnect(config) -> `Promise`
 
-Close driver
+Disconnect driver
 
 | Param | Type | Description |
 | ----- | --- | -------- |

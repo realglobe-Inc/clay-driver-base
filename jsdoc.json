@@ -55,10 +55,10 @@
       },
       "functions": [
         {
-          "name": "open",
+          "name": "connect",
           "access": "",
           "virtual": false,
-          "description": "Open driver",
+          "description": "Connect driver",
           "parameters": [
             {
               "name": "config",
@@ -76,10 +76,10 @@
           }
         },
         {
-          "name": "close",
+          "name": "disconnect",
           "access": "",
           "virtual": false,
-          "description": "Close driver",
+          "description": "Disconnect driver",
           "parameters": [
             {
               "name": "config",
