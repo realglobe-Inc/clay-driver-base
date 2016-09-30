@@ -24,7 +24,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-base#readme",
   "dependencies": {
     "abind": "^1.0.0",
-    "clay-constants": "^0.2.0",
+    "clay-constants": "^0.3.7",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
