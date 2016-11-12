@@ -96,6 +96,7 @@ class MyDriver extends Driver {
   })
   /* ... */
 }
+
 ```
 
 For more detail, see [API Guide](./doc/api/api.md)
@@ -123,6 +124,8 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
++ [ClayDB][clay_d_b_url]
 
+[clay_d_b_url]: https://github.com/realglobe-Inc/claydb
 
 <!-- Links End -->

@@ -1,4 +1,4 @@
-# clay-driver-base@0.0.5
+# clay-driver-base@0.0.6
 
 Base driver for clay
 
