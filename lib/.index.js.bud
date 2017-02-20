@@ -5,17 +5,11 @@
 'use strict'
 
 const pkg = require('../package.json')
-const { moduleIndex } = require('sg-templates')
 
 module.exports = {
   force: true,
   mode: '444',
-  tmpl: moduleIndex,
   data: {
-    name: 'Driver',
-    sub: {
-      assertDriver: './assert_driver'
-    },
     pkg
   }
 }

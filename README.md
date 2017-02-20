@@ -78,15 +78,16 @@ const { Driver } = require('clay-driver-base')
 
 // Define custom driver
 class MyDriver extends Driver {
-  create (namepath, data) { /* ... */ }
+  one (namespace, id) { /* ... */ }
 
-  read (namepath) { /* ... */ }
+  list (namespace, condition) { /* ... */ }
 
-  update (namepath, data) { /* ... */ }
+  create (namespace, attributes) { /* ... */ }
 
-  delete (namepath) { /* ... */ }
+  update (namespace, id, attributes) { /* ... */ }
 
-  cursor (namepath, options = {}) { /* ... */ }
+  destroy (namespace, id) { /* ... */ }
+
 }
 
 {
@@ -113,7 +114,7 @@ For more detail, see [API Guide](./doc/api/api.md)
 
 License
 -------
-This software is released under the [MIT License](https://github.com/realglobe-Inc/clay-driver-base/blob/master/LICENSE).
+This software is released under the [Apache-2.0 License](https://github.com/realglobe-Inc/clay-driver-base/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
@@ -125,7 +126,9 @@ Links
 ------
 
 + [ClayDB][clay_d_b_url]
++ [Realglobe, Inc.][realglobe,_inc__url]
 
 [clay_d_b_url]: https://github.com/realglobe-Inc/claydb
+[realglobe,_inc__url]: http://realglobe.jp
 
 <!-- Links End -->

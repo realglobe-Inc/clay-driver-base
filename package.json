@@ -1,12 +1,12 @@
 {
   "name": "clay-driver-base",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Base driver for clay",
   "main": "lib",
   "browser": "ci/browser",
   "scripts": {
     "test": "node ./ci/test.js",
-    "prepublish": "node ./ci/build.js && node ./ci/shim.js && node ./ci/doc.js"
+    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/doc.js"
   },
   "repository": "realglobe-Inc/clay-driver-base",
   "keywords": [
@@ -17,36 +17,35 @@
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/clay-driver-base/issues"
   },
   "homepage": "https://github.com/realglobe-Inc/clay-driver-base#readme",
   "dependencies": {
-    "abind": "^1.0.0",
-    "clay-constants": "^0.3.7",
+    "abind": "^1.0.3",
+    "clay-constants": "^0.7.1",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
   "devDependencies": {
-    "ababel": "^1.1.10",
-    "ababel-es2015": "^1.0.8",
-    "amocha": "^1.0.15",
+    "ababel": "^2.0.1",
+    "ababel-es2015": "^2.0.1",
+    "amocha": "^2.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
-    "ape-reporting": "^3.0.2",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.19",
-    "ape-updating": "^4.0.5",
+    "ape-updating": "^4.1.0",
     "coz": "^6.0.20",
-    "filecopy": "^2.1.2",
+    "filecopy": "^3.0.0",
     "injectmock": "^2.0.0",
-    "sg-templates": "^1.2.2",
-    "sg-travis": "^1.1.33"
+    "sg-templates": "^1.2.5",
+    "sugos-travis": "^2.0.7"
   },
   "engines": {
     "node": ">=6",
-    "npm": ">=3"
+    "npm": ">=4"
   },
   "publishConfig": {
     "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"

@@ -1,23 +1,6 @@
 {
   "functions": [
     {
-      "name": "assertDriver",
-      "access": "",
-      "virtual": false,
-      "description": "Assert driver instance",
-      "parameters": [
-        {
-          "name": "driver",
-          "type": "Driver",
-          "description": "",
-          "default": "",
-          "optional": "",
-          "nullable": ""
-        }
-      ],
-      "examples": []
-    },
-    {
       "name": "create",
       "access": "",
       "virtual": false,
@@ -55,15 +38,26 @@
       },
       "functions": [
         {
-          "name": "connect",
+          "name": "one",
           "access": "",
           "virtual": false,
-          "description": "Connect driver",
+          "description": "Get a data from namespace",
           "parameters": [
             {
-              "name": "config",
-              "type": "Object",
-              "description": "",
+              "name": "namespace",
+              "type": "string",
+              "description": "Namespace to work with",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "id",
+              "type": [
+                "string",
+                "number"
+              ],
+              "description": "Resource id",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -71,39 +65,79 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise",
-            "description": ""
+            "type": "Promise.<Resource>",
+            "description": "- Found resource"
           }
         },
         {
-          "name": "disconnect",
+          "name": "list",
           "access": "",
           "virtual": false,
-          "description": "Disconnect driver",
+          "description": "List resource in namespace",
           "parameters": [
             {
-              "name": "config",
-              "type": "Object",
-              "description": "",
+              "name": "namespace",
+              "type": "string",
+              "description": "Namespace to work with",
               "default": "",
               "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "condition",
+              "type": "Object",
+              "description": "List condition query",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.filter",
+              "type": "Object",
+              "description": "Filter condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page",
+              "type": "Object",
+              "description": "Page condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.number",
+              "type": "Object",
+              "description": "Number of page, start with 1",
+              "default": 1,
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.size",
+              "type": "Object",
+              "description": "Number of resources per page",
+              "default": 100,
+              "optional": true,
               "nullable": ""
             }
           ],
           "examples": [],
           "returns": {
-            "type": "Promise",
-            "description": ""
+            "type": "Promise.<ResourceList>",
+            "description": "- Found resource list"
           }
         },
         {
           "name": "create",
           "access": "",
           "virtual": false,
-          "description": "Create data with namepath",
+          "description": "Create data with namespace",
           "parameters": [
             {
-              "name": "namepath",
+              "name": "namespace",
               "type": "string",
               "description": "Namepath string",
               "default": "",
@@ -111,30 +145,9 @@
               "nullable": ""
             },
             {
-              "name": "data",
+              "name": "attributes",
               "type": "Object",
-              "description": "Resource data to create",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "read",
-          "access": "",
-          "virtual": false,
-          "description": "Read data with namepath",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
+              "description": "Resource attributes to create",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -150,10 +163,10 @@
           "name": "update",
           "access": "",
           "virtual": false,
-          "description": "Update data with namepath",
+          "description": "Update data with namespace",
           "parameters": [
             {
-              "name": "namepath",
+              "name": "namespace",
               "type": "string",
               "description": "Namepath string",
               "default": "",
@@ -161,9 +174,20 @@
               "nullable": ""
             },
             {
-              "name": "data",
+              "name": "id",
+              "type": [
+                "string",
+                "number"
+              ],
+              "description": "Resource id",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "attributes",
               "type": "Object",
-              "description": "Resource data to create",
+              "description": "Resource attributes to update",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -176,15 +200,26 @@
           }
         },
         {
-          "name": "delete",
+          "name": "destroy",
           "access": "",
           "virtual": false,
-          "description": "Delete data with namepath",
+          "description": "Delete data with namespace",
           "parameters": [
             {
-              "name": "namepath",
+              "name": "namespace",
               "type": "string",
               "description": "Namepath string",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "id",
+              "type": [
+                "string",
+                "number"
+              ],
+              "description": "Resource id",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -194,80 +229,6 @@
           "returns": {
             "type": "Promise",
             "description": ""
-          }
-        },
-        {
-          "name": "cursor",
-          "access": "",
-          "virtual": false,
-          "description": "Get cursor to iterate",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "options",
-              "type": "Object",
-              "description": "Optional settings",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise.<Driver.Cursor>",
-            "description": ""
-          }
-        },
-        {
-          "name": "count",
-          "access": "",
-          "virtual": false,
-          "description": "Count entries",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "options",
-              "type": "Object",
-              "description": "Optional settings",
-              "default": "{}",
-              "optional": true,
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise.<number>",
-            "description": ""
-          }
-        }
-      ],
-      "classes": [
-        {
-          "name": "Cursor",
-          "description": "",
-          "extends": [],
-          "access": "",
-          "virtual": false,
-          "fires": "",
-          "constructor": {
-            "name": "Cursor",
-            "description": "Cursor of driver data",
-            "parameters": [],
-            "examples": []
           }
         }
       ]

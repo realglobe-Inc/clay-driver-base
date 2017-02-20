@@ -1,14 +1,14 @@
 /**
- * Test case for create.
+ * Test case for validateDriver.
  * Runs with mocha.
  */
 'use strict'
 
-const create = require('../lib/create.js')
+const validateDriver = require('../lib/validating/validate_driver.js')
 const assert = require('assert')
 const co = require('co')
 
-describe('create', function () {
+describe('validate-driver', function () {
   this.timeout(3000)
 
   before(() => co(function * () {
@@ -19,9 +19,8 @@ describe('create', function () {
 
   }))
 
-  it('Create', () => co(function * () {
-    let created = create()
-    assert.ok(created)
+  it('Validate driver', () => co(function * () {
+
   }))
 })
 
