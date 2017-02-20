@@ -20,7 +20,15 @@ describe('validate-driver', function () {
   }))
 
   it('Validate driver', () => co(function * () {
-
+    assert.ifError(
+      validateDriver({
+        create () {},
+        update () {},
+        destroy () {},
+        list () {},
+        one () {}
+      })
+    )
   }))
 })
 
