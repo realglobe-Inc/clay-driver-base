@@ -3,7 +3,6 @@
 Base driver for clay
 
 + Functions
-  + [()](#clay-driver-base-function-undefined)
   + [create(args)](#clay-driver-base-function-create)
 + [Driver](clay-driver-base-classes) Class
   + [new Driver()](#clay-driver-base-classes-driver-constructor)
@@ -14,11 +13,6 @@ Base driver for clay
   + [driver.destroy(namespace, id)](#clay-driver-base-classes-driver-destroy)
 
 ## Functions
-
-<a class='md-heading-link' name="clay-driver-base-function-undefined" ></a>
-
-### ()
-
 
 <a class='md-heading-link' name="clay-driver-base-function-create" ></a>
 
