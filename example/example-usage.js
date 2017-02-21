@@ -4,15 +4,16 @@ const { Driver } = require('clay-driver-base')
 
 // Define custom driver
 class MyDriver extends Driver {
-  create (namepath, data) { /* ... */ }
+  one (namespace, id) { /* ... */ }
 
-  read (namepath) { /* ... */ }
+  list (namespace, condition) { /* ... */ }
 
-  update (namepath, data) { /* ... */ }
+  create (namespace, attributes) { /* ... */ }
 
-  delete (namepath) { /* ... */ }
+  update (namespace, id, attributes) { /* ... */ }
 
-  cursor (namepath, options = {}) { /* ... */ }
+  destroy (namespace, id) { /* ... */ }
+
 }
 
 {

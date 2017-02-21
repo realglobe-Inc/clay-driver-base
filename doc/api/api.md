@@ -3,30 +3,22 @@
 Base driver for clay
 
 + Functions
-  + [assertDriver(driver)](#clay-driver-base-function-assert-driver)
+  + [()](#clay-driver-base-function-undefined)
   + [create(args)](#clay-driver-base-function-create)
 + [Driver](clay-driver-base-classes) Class
   + [new Driver()](#clay-driver-base-classes-driver-constructor)
-  + [driver.connect(config)](#clay-driver-base-classes-driver-connect)
-  + [driver.disconnect(config)](#clay-driver-base-classes-driver-disconnect)
-  + [driver.create(namepath, data)](#clay-driver-base-classes-driver-create)
-  + [driver.read(namepath)](#clay-driver-base-classes-driver-read)
-  + [driver.update(namepath, data)](#clay-driver-base-classes-driver-update)
-  + [driver.delete(namepath)](#clay-driver-base-classes-driver-delete)
-  + [driver.cursor(namepath, options)](#clay-driver-base-classes-driver-cursor)
-  + [driver.count(namepath, options)](#clay-driver-base-classes-driver-count)
+  + [driver.one(namespace, id)](#clay-driver-base-classes-driver-one)
+  + [driver.list(namespace, condition)](#clay-driver-base-classes-driver-list)
+  + [driver.create(namespace, attributes)](#clay-driver-base-classes-driver-create)
+  + [driver.update(namespace, id, attributes)](#clay-driver-base-classes-driver-update)
+  + [driver.destroy(namespace, id)](#clay-driver-base-classes-driver-destroy)
 
 ## Functions
 
-<a class='md-heading-link' name="clay-driver-base-function-assert-driver" ></a>
+<a class='md-heading-link' name="clay-driver-base-function-undefined" ></a>
 
-### assertDriver(driver)
+### ()
 
-Assert driver instance
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| driver | Driver |  |
 
 <a class='md-heading-link' name="clay-driver-base-function-create" ></a>
 
@@ -55,96 +47,69 @@ Constructor of Driver class
 
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-connect" ></a>
+<a class='md-heading-link' name="clay-driver-base-classes-driver-one" ></a>
 
-### driver.connect(config) -> `Promise`
+### driver.one(namespace, id) -> `Promise.<Resource>`
 
-Connect driver
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| config | Object |  |
-
-
-<a class='md-heading-link' name="clay-driver-base-classes-driver-disconnect" ></a>
-
-### driver.disconnect(config) -> `Promise`
-
-Disconnect driver
+Get a data from namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| config | Object |  |
+| namespace | string | Namespace to work with |
+| id | string,number | Resource id |
+
+
+<a class='md-heading-link' name="clay-driver-base-classes-driver-list" ></a>
+
+### driver.list(namespace, condition) -> `Promise.<ResourceList>`
+
+List resource in namespace
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| namespace | string | Namespace to work with |
+| condition | Object | List condition query |
+| condition.filter | Object | Filter condition |
+| condition.page | Object | Page condition |
+| condition.page.number | Object | Number of page, start with 1 |
+| condition.page.size | Object | Number of resources per page |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-create" ></a>
 
-### driver.create(namepath, data) -> `Promise`
+### driver.create(namespace, attributes) -> `Promise`
 
-Create data with namepath
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| namepath | string | Namepath string |
-| data | Object | Resource data to create |
-
-
-<a class='md-heading-link' name="clay-driver-base-classes-driver-read" ></a>
-
-### driver.read(namepath) -> `Promise`
-
-Read data with namepath
+Create data with namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namepath | string | Namepath string |
+| namespace | string | Namepath string |
+| attributes | Object | Resource attributes to create |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-update" ></a>
 
-### driver.update(namepath, data) -> `Promise`
+### driver.update(namespace, id, attributes) -> `Promise`
 
-Update data with namepath
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| namepath | string | Namepath string |
-| data | Object | Resource data to create |
-
-
-<a class='md-heading-link' name="clay-driver-base-classes-driver-delete" ></a>
-
-### driver.delete(namepath) -> `Promise`
-
-Delete data with namepath
+Update data with namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namepath | string | Namepath string |
+| namespace | string | Namepath string |
+| id | string,number | Resource id |
+| attributes | Object | Resource attributes to update |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-cursor" ></a>
+<a class='md-heading-link' name="clay-driver-base-classes-driver-destroy" ></a>
 
-### driver.cursor(namepath, options) -> `Promise.<Driver.Cursor>`
+### driver.destroy(namespace, id) -> `Promise`
 
-Get cursor to iterate
-
-| Param | Type | Description |
-| ----- | --- | -------- |
-| namepath | string | Namepath string |
-| options | Object | Optional settings |
-
-
-<a class='md-heading-link' name="clay-driver-base-classes-driver-count" ></a>
-
-### driver.count(namepath, options) -> `Promise.<number>`
-
-Count entries
+Delete data with namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namepath | string | Namepath string |
-| options | Object | Optional settings |
+| namespace | string | Namepath string |
+| id | string,number | Resource id |
 
 
 
