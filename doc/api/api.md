@@ -1,4 +1,4 @@
-# clay-driver-base@0.0.6
+# clay-driver-base@0.1.0
 
 Base driver for clay
 
@@ -49,19 +49,19 @@ Constructor of Driver class
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-one" ></a>
 
-### driver.one(namespace, id) -> `Promise.<Resource>`
+### driver.one(namespace, id) -> `Promise.<ClayEntity>`
 
-Get a data from namespace
+Get single resource from namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | namespace | string | Namespace to work with |
-| id | string,number | Resource id |
+| id | ClayId | Resource id |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-list" ></a>
 
-### driver.list(namespace, condition) -> `Promise.<ResourceList>`
+### driver.list(namespace, condition) -> `Promise.<ClayCollection>`
 
 List resource in namespace
 
@@ -77,7 +77,7 @@ List resource in namespace
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-create" ></a>
 
-### driver.create(namespace, attributes) -> `Promise`
+### driver.create(namespace, attributes) -> `Promise.<ClayEntity>`
 
 Create data with namespace
 
@@ -89,27 +89,27 @@ Create data with namespace
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-update" ></a>
 
-### driver.update(namespace, id, attributes) -> `Promise`
+### driver.update(namespace, id, attributes) -> `Promise.<ClayEntity>`
 
 Update data with namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | namespace | string | Namepath string |
-| id | string,number | Resource id |
+| id | ClayId | Resource id |
 | attributes | Object | Resource attributes to update |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-destroy" ></a>
 
-### driver.destroy(namespace, id) -> `Promise`
+### driver.destroy(namespace, id) -> `Promise.<number>`
 
 Delete data with namespace
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | namespace | string | Namepath string |
-| id | string,number | Resource id |
+| id | ClayId | Resource id |
 
 
 

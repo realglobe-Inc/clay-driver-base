@@ -34,7 +34,6 @@ module.exports = {
 
       let functions = byName(jsdoc[ 'functions' ], { wrapper: asFunc })
       let {
-        assertDriver,
         create
       } = functions
       return {
@@ -42,7 +41,6 @@ module.exports = {
           Driver
         ],
         functions: [
-          assertDriver,
           create
         ]
       }
