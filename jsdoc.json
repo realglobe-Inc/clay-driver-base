@@ -41,7 +41,7 @@
           "name": "one",
           "access": "",
           "virtual": false,
-          "description": "Get a data from namespace",
+          "description": "Get single resource from namespace",
           "parameters": [
             {
               "name": "namespace",
@@ -53,10 +53,7 @@
             },
             {
               "name": "id",
-              "type": [
-                "string",
-                "number"
-              ],
+              "type": "ClayId",
               "description": "Resource id",
               "default": "",
               "optional": "",
@@ -65,8 +62,8 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise.<Resource>",
-            "description": "- Found resource"
+            "type": "Promise.<ClayEntity>",
+            "description": "Found resource"
           }
         },
         {
@@ -126,8 +123,8 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise.<ResourceList>",
-            "description": "- Found resource list"
+            "type": "Promise.<ClayCollection>",
+            "description": "Found resource collection"
           }
         },
         {
@@ -155,8 +152,8 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise",
-            "description": ""
+            "type": "Promise.<ClayEntity>",
+            "description": "Created data"
           }
         },
         {
@@ -175,10 +172,7 @@
             },
             {
               "name": "id",
-              "type": [
-                "string",
-                "number"
-              ],
+              "type": "ClayId",
               "description": "Resource id",
               "default": "",
               "optional": "",
@@ -195,8 +189,8 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise",
-            "description": ""
+            "type": "Promise.<ClayEntity>",
+            "description": "Updated data"
           }
         },
         {
@@ -215,10 +209,7 @@
             },
             {
               "name": "id",
-              "type": [
-                "string",
-                "number"
-              ],
+              "type": "ClayId",
               "description": "Resource id",
               "default": "",
               "optional": "",
@@ -227,8 +218,8 @@
           ],
           "examples": [],
           "returns": {
-            "type": "Promise",
-            "description": ""
+            "type": "Promise.<number>",
+            "description": "Destroyed count (0 or 1)"
           }
         }
       ]
