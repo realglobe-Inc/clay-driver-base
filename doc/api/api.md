@@ -1,4 +1,4 @@
-# clay-driver-base@0.1.2
+# clay-driver-base@0.1.3
 
 Base driver for clay
 
@@ -11,6 +11,7 @@ Base driver for clay
   + [driver.create(namespace, attributes)](#clay-driver-base-classes-driver-create)
   + [driver.update(namespace, id, attributes)](#clay-driver-base-classes-driver-update)
   + [driver.destroy(namespace, id)](#clay-driver-base-classes-driver-destroy)
+  + [driver.drop(namespace)](#clay-driver-base-classes-driver-drop)
 
 ## Functions
 
@@ -100,6 +101,17 @@ Delete data with namespace
 | ----- | --- | -------- |
 | namespace | string | Namepath string |
 | id | ClayId | Resource id |
+
+
+<a class='md-heading-link' name="clay-driver-base-classes-driver-drop" ></a>
+
+### driver.drop(namespace) -> `Promise.<boolean>`
+
+Drop resource with namespace
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| namespace | string | Namepath string |
 
 
 
