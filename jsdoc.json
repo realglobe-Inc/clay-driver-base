@@ -189,6 +189,27 @@
             "type": "Promise.<number>",
             "description": "Destroyed count (0 or 1)"
           }
+        },
+        {
+          "name": "drop",
+          "access": "",
+          "virtual": false,
+          "description": "Drop resource with namespace",
+          "parameters": [
+            {
+              "name": "namespace",
+              "type": "string",
+              "description": "Namepath string",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<boolean>",
+            "description": "False if there were nothing to drop"
+          }
         }
       ]
     }
