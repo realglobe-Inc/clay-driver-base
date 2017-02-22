@@ -22,6 +22,14 @@ describe('bulk-mix', function () {
 
   it('Bulk mix', () => co(function * () {
     class BaseClass {
+      one () {
+        return { id: clayId() }
+      }
+
+      list () {
+        return [ { id: clayId() }, { id: clayId() } ]
+      }
+
       create (namespace, attributes) {
         return Promise.resolve(Object.assign({ id: clayId() }, attributes))
       }
@@ -38,6 +46,9 @@ describe('bulk-mix', function () {
 
     let bulkable = new BulkMixed()
 
+    let ones = yield bulkable.oneBulk('hoge', [ '1', '2' ])
+    assert.ok(ones)
+
     let created = yield bulkable.createBulk('hoge', [
       { name: 'foo' },
       { name: 'bar' }
@@ -49,6 +60,9 @@ describe('bulk-mix', function () {
       '2': { name: 'bar' }
     })
     assert.equal(Object.keys(updated).length, 2)
+
+    let lists = yield bulkable.listBulk('hoge', [ {}, {} ])
+    assert.ok(lists)
 
     let destroyed = yield bulkable.destroyBulk('huge', [ 1, 2 ])
     assert.equal(destroyed, 2)
