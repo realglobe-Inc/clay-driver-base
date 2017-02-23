@@ -26,7 +26,9 @@ describe('validate-driver', function () {
         update () {},
         destroy () {},
         list () {},
-        one () {}
+        one () {},
+        drop () {},
+        resources () {}
       })
     )
   }))
