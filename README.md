@@ -120,12 +120,13 @@ Base driver for clay
   + [create(args)](#clay-driver-base-function-create)
 + [Driver](clay-driver-base-classes) Class
   + [new Driver()](#clay-driver-base-classes-driver-constructor)
-  + [driver.one(namespace, id)](#clay-driver-base-classes-driver-one)
-  + [driver.list(namespace, condition)](#clay-driver-base-classes-driver-list)
-  + [driver.create(namespace, attributes)](#clay-driver-base-classes-driver-create)
-  + [driver.update(namespace, id, attributes)](#clay-driver-base-classes-driver-update)
-  + [driver.destroy(namespace, id)](#clay-driver-base-classes-driver-destroy)
-  + [driver.drop(namespace)](#clay-driver-base-classes-driver-drop)
+  + [driver.one(resourceName, id)](#clay-driver-base-classes-driver-one)
+  + [driver.list(resourceName, condition)](#clay-driver-base-classes-driver-list)
+  + [driver.create(resourceName, attributes)](#clay-driver-base-classes-driver-create)
+  + [driver.update(resourceName, id, attributes)](#clay-driver-base-classes-driver-update)
+  + [driver.destroy(resourceName, id)](#clay-driver-base-classes-driver-destroy)
+  + [driver.drop(resourceName)](#clay-driver-base-classes-driver-drop)
+  + [driver.resources()](#clay-driver-base-classes-driver-resources)
 
 ## Functions
 
@@ -158,75 +159,81 @@ Constructor of Driver class
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-one" ></a>
 
-### driver.one(namespace, id) -> `Promise.<ClayEntity>`
+### driver.one(resourceName, id) -> `Promise.<ClayEntity>`
 
-Get single resource from namespace
+Get single entity from resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namespace to work with |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-list" ></a>
 
-### driver.list(namespace, condition) -> `Promise.<ClayCollection>`
+### driver.list(resourceName, condition) -> `Promise.<ClayCollection>`
 
-List resource in namespace
+List entities from resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namespace to work with |
+| resourceName | string | Name of resource |
 | condition | ListCondition | List condition query |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-create" ></a>
 
-### driver.create(namespace, attributes) -> `Promise.<ClayEntity>`
+### driver.create(resourceName, attributes) -> `Promise.<ClayEntity>`
 
-Create data with namespace
+Create a new entity with resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | attributes | Object | Resource attributes to create |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-update" ></a>
 
-### driver.update(namespace, id, attributes) -> `Promise.<ClayEntity>`
+### driver.update(resourceName, id, attributes) -> `Promise.<ClayEntity>`
 
-Update data with namespace
+Update an existing entity in resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 | attributes | Object | Resource attributes to update |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-destroy" ></a>
 
-### driver.destroy(namespace, id) -> `Promise.<number>`
+### driver.destroy(resourceName, id) -> `Promise.<number>`
 
-Delete data with namespace
+Delete a entity resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 | id | ClayId | Resource id |
 
 
 <a class='md-heading-link' name="clay-driver-base-classes-driver-drop" ></a>
 
-### driver.drop(namespace) -> `Promise.<boolean>`
+### driver.drop(resourceName) -> `Promise.<boolean>`
 
-Drop resource with namespace
+Drop resource
 
 | Param | Type | Description |
 | ----- | --- | -------- |
-| namespace | string | Namepath string |
+| resourceName | string | Name of resource |
 
+
+<a class='md-heading-link' name="clay-driver-base-classes-driver-resources" ></a>
+
+### driver.resources() -> `Promise.<Resource>`
+
+List resources
 
 
 
