@@ -1,18 +1,18 @@
-# clay-driver-base@2.0.0
+# clay-driver-base@2.0.1
 
 Base driver for clay
 
 + Functions
   + [create(args)](#clay-driver-base-function-create)
-+ [`Driver`](#clay-driver-base-classes) Class
-  + [new Driver()](#clay-driver-base-classes-driver-constructor)
-  + [driver.one(resourceName, id)](#clay-driver-base-classes-driver-one)
-  + [driver.list(resourceName, condition)](#clay-driver-base-classes-driver-list)
-  + [driver.create(resourceName, attributes)](#clay-driver-base-classes-driver-create)
-  + [driver.update(resourceName, id, attributes)](#clay-driver-base-classes-driver-update)
-  + [driver.destroy(resourceName, id)](#clay-driver-base-classes-driver-destroy)
-  + [driver.drop(resourceName)](#clay-driver-base-classes-driver-drop)
-  + [driver.resources()](#clay-driver-base-classes-driver-resources)
++ [`Driver`](#clay-driver-base-class) Class
+  + [new Driver()](#clay-driver-base-class-driver-constructor)
+  + [driver.one(resourceName, id)](#clay-driver-base-class-driver-one)
+  + [driver.list(resourceName, condition)](#clay-driver-base-class-driver-list)
+  + [driver.create(resourceName, attributes)](#clay-driver-base-class-driver-create)
+  + [driver.update(resourceName, id, attributes)](#clay-driver-base-class-driver-update)
+  + [driver.destroy(resourceName, id)](#clay-driver-base-class-driver-destroy)
+  + [driver.drop(resourceName)](#clay-driver-base-class-driver-drop)
+  + [driver.resources()](#clay-driver-base-class-driver-resources)
 
 ## Functions
 
@@ -28,7 +28,7 @@ Create driver instance
 
 
 
-<a class='md-heading-link' name="clay-driver-base-classes"></a>
+<a class='md-heading-link' name="clay-driver-base-class"></a>
 
 ## `Driver` Class
 
@@ -37,7 +37,7 @@ Abstract driver
 
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-constructor" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-constructor" ></a>
 
 ### new Driver()
 
@@ -45,7 +45,7 @@ Constructor of Driver class
 
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-one" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-one" ></a>
 
 ### driver.one(resourceName, id) -> `Promise.<ClayEntity>`
 
@@ -57,7 +57,7 @@ Get single entity from resource
 | id | ClayId | Resource id |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-list" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-list" ></a>
 
 ### driver.list(resourceName, condition) -> `Promise.<ClayCollection>`
 
@@ -69,7 +69,7 @@ List entities from resource
 | condition | ListCondition | List condition query |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-create" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-create" ></a>
 
 ### driver.create(resourceName, attributes) -> `Promise.<ClayEntity>`
 
@@ -81,7 +81,7 @@ Create a new entity with resource
 | attributes | Object | Resource attributes to create |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-update" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-update" ></a>
 
 ### driver.update(resourceName, id, attributes) -> `Promise.<ClayEntity>`
 
@@ -94,7 +94,7 @@ Update an existing entity in resource
 | attributes | Object | Resource attributes to update |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-destroy" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-destroy" ></a>
 
 ### driver.destroy(resourceName, id) -> `Promise.<number>`
 
@@ -106,7 +106,7 @@ Delete a entity resource
 | id | ClayId | Resource id |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-drop" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-drop" ></a>
 
 ### driver.drop(resourceName) -> `Promise.<boolean>`
 
@@ -117,7 +117,7 @@ Drop resource
 | resourceName | string | Name of resource |
 
 
-<a class='md-heading-link' name="clay-driver-base-classes-driver-resources" ></a>
+<a class='md-heading-link' name="clay-driver-base-class-driver-resources" ></a>
 
 ### driver.resources() -> `Promise.<Resource>`
 
