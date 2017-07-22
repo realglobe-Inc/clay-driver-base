@@ -112,7 +112,7 @@ For more detail, see [API Guide](./doc/api/api.md)
 API
 ---------
 
-# clay-driver-base@3.0.1
+# clay-driver-base@3.1.0
 
 Base driver for clay
 
