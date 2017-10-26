@@ -1,6 +1,6 @@
 'use strict'
 
-const { Driver } = require('clay-driver-base')
+const {Driver} = require('clay-driver-base')
 
 // Define custom driver
 class MyDriver extends Driver {
@@ -18,8 +18,8 @@ class MyDriver extends Driver {
 
 {
   const clayLump = require('clay-lump')
-  let lump01 = clayLump({
-    driver: new MyDriver({ /* ... */ })
+  const lump01 = clayLump({
+    driver: new MyDriver({/* ... */})
   })
   /* ... */
 }

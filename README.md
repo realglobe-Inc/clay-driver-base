@@ -74,7 +74,7 @@ Usage
 ```javascript
 'use strict'
 
-const { Driver } = require('clay-driver-base')
+const {Driver} = require('clay-driver-base')
 
 // Define custom driver
 class MyDriver extends Driver {
@@ -92,8 +92,8 @@ class MyDriver extends Driver {
 
 {
   const clayLump = require('clay-lump')
-  let lump01 = clayLump({
-    driver: new MyDriver({ /* ... */ })
+  const lump01 = clayLump({
+    driver: new MyDriver({/* ... */})
   })
   /* ... */
 }
@@ -112,7 +112,7 @@ For more detail, see [API Guide](./doc/api/api.md)
 API
 ---------
 
-# clay-driver-base@3.1.2
+# clay-driver-base@4.0.0
 
 Base driver for clay
 
