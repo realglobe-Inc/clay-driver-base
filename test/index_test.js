@@ -6,24 +6,24 @@
 
 const index = require('../lib/index.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('index', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Assert index', () => co(function * () {
+  it('Assert index', async () => {
     assert.ok(index)
     assert.ok(index.create)
     assert.ok(index.Driver)
-  }))
+  })
 })
 
 /* global describe, before, after, it */

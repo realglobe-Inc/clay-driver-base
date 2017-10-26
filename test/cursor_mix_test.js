@@ -6,20 +6,19 @@
 
 const cursorMix = require('../lib/mixins/cursor_mix.js')
 const {ok, equal} = require('assert')
-const co = require('co')
 
 describe('cursor-mix', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Cursor mix', () => co(function * () {
+  it('Cursor mix', async () => {
     class Listable {
       list (resourceName, options = {}) {
         let {filter = {}, page = {}} = options
@@ -35,20 +34,22 @@ describe('cursor-mix', function () {
 
     let cursorMixed = new CursorMixed()
 
-    let cursor = yield cursorMixed.cursor('hoge', {
+    let cursor = await cursorMixed.cursor('hoge', {
       parser (v) {
-        return v.map((v) => Object.assign(v, {
-          parsed: true
-        }))
+        return v.map(
+          (v) => Object.assign(v, {
+            parsed: true
+          })
+        )
       }
     })
     equal(cursor.length, 3)
     for (let fetch of cursor) {
-      let entity = yield fetch()
+      let entity = await fetch()
       ok(entity)
       ok(entity.parsed)
     }
-  }))
+  })
 })
 
 /* global describe, before, after, it */

@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-base",
-  "version": "3.1.3",
+  "version": "4.0.0",
   "description": "Base driver for clay",
   "main": "lib",
   "browser": "ci/browser",
@@ -23,29 +23,28 @@
   },
   "homepage": "https://github.com/realglobe-Inc/clay-driver-base#readme",
   "dependencies": {
-    "clay-constants": "^3.0.1",
-    "co": "^4.6.0"
+    "clay-constants": "^3.4.4"
   },
   "devDependencies": {
-    "ababel": "^2.0.1",
+    "ababel": "^2.0.3",
     "ababel-es2015": "^2.0.1",
-    "amocha": "^2.0.0",
+    "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^5.0.20",
+    "ape-tmpl": "^6.0.2",
     "ape-updating": "^4.1.0",
     "clay-id": "^3.0.1",
     "coz": "^6.0.20",
-    "filecopy": "^3.0.1",
+    "filecopy": "^4.0.0",
     "injectmock": "^2.0.0",
-    "request": "^2.81.0",
+    "request": "^2.83.0",
     "sg-templates": "^1.3.2",
     "sugos-travis": "^2.0.7",
-    "writeout": "^2.1.0"
+    "writeout": "^2.2.1"
   },
   "engines": {
-    "node": ">=6",
+    "node": ">=7.6",
     "npm": ">=4"
   }
 }

@@ -6,20 +6,20 @@
 
 const validateDriver = require('../lib/validating/validate_driver.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('validate-driver', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Validate driver', () => co(function * () {
+  it('Validate driver', async () => {
     assert.ifError(
       validateDriver({
         create () {},
@@ -31,7 +31,7 @@ describe('validate-driver', function () {
         resources () {}
       })
     )
-  }))
+  })
 })
 
 /* global describe, before, after, it */
