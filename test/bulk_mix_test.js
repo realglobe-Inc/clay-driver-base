@@ -65,7 +65,7 @@ describe('bulk-mix', function () {
     assert.ok(lists)
 
     let destroyed = await bulkable.destroyBulk('huge', [1, 2])
-    assert.equal(destroyed, 2)
+    assert.deepEqual(destroyed, [1, 1])
   })
 })
 
