@@ -107,12 +107,12 @@ For more detail, see [API Guide](./doc/api/api.md)
 
 <!-- Section from "doc/guides/03.API.md.hbs" Start -->
 
-<a name="section-doc-guides-03-a-p-i-md"></a>
+<a name="section-doc-guides-03-api-md"></a>
 
 API
 ---------
 
-# clay-driver-base@4.1.5
+# clay-driver-base@4.1.6
 
 Base driver for clay
 
