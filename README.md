@@ -112,7 +112,7 @@ For more detail, see [API Guide](./doc/api/api.md)
 API
 ---------
 
-# clay-driver-base@4.1.7
+# clay-driver-base@4.1.8
 
 Base driver for clay
 
@@ -120,8 +120,8 @@ Base driver for clay
   + [create(args)](#clay-driver-base-function-create)
 + [`Driver`](#clay-driver-base-class) Class
   + [new Driver()](#clay-driver-base-class-driver-constructor)
-  + [driver.one(resourceName, id)](#clay-driver-base-class-driver-one)
-  + [driver.list(resourceName, condition)](#clay-driver-base-class-driver-list)
+  + [driver.one(resourceName, id, options)](#clay-driver-base-class-driver-one)
+  + [driver.list(resourceName, condition, options)](#clay-driver-base-class-driver-list)
   + [driver.create(resourceName, attributes)](#clay-driver-base-class-driver-create)
   + [driver.update(resourceName, id, attributes)](#clay-driver-base-class-driver-update)
   + [driver.destroy(resourceName, id)](#clay-driver-base-class-driver-destroy)
@@ -161,7 +161,7 @@ Constructor of Driver class
 
 <a class='md-heading-link' name="clay-driver-base-class-driver-one" ></a>
 
-### driver.one(resourceName, id) -> `Promise.<ClayEntity>`
+### driver.one(resourceName, id, options) -> `Promise.<ClayEntity>`
 
 Get single entity from resource
 
@@ -169,11 +169,12 @@ Get single entity from resource
 | ----- | --- | -------- |
 | resourceName | string | Name of resource |
 | id | ClayId | Resource id |
+| options | Object | Options settings |
 
 
 <a class='md-heading-link' name="clay-driver-base-class-driver-list" ></a>
 
-### driver.list(resourceName, condition) -> `Promise.<ClayCollection>`
+### driver.list(resourceName, condition, options) -> `Promise.<ClayCollection>`
 
 List entities from resource
 
@@ -181,6 +182,7 @@ List entities from resource
 | ----- | --- | -------- |
 | resourceName | string | Name of resource |
 | condition | ListCondition | List condition query |
+| options | Object | Options settings |
 
 
 <a class='md-heading-link' name="clay-driver-base-class-driver-create" ></a>

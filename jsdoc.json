@@ -58,6 +58,14 @@
               "default": "",
               "optional": "",
               "nullable": ""
+            },
+            {
+              "name": "options",
+              "type": "Object",
+              "description": "Options settings",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
             }
           ],
           "examples": [],
@@ -84,6 +92,14 @@
               "name": "condition",
               "type": "ListCondition",
               "description": "List condition query",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "options",
+              "type": "Object",
+              "description": "Options settings",
               "default": "{}",
               "optional": true,
               "nullable": ""
